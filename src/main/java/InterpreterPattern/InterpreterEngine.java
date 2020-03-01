@@ -74,14 +74,5 @@ public class InterpreterEngine {
         }
         return resultFiles;
     }
-    public List<IFile> When(String input, IFolder root){
-        return null;
-    }
-    public List<IFile> At(Date input, IFolder root){
-        return null;
-    }
-    public List<IFile> Who(String input, IFolder root){
-        return null;
-    }
 
 }

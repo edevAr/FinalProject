@@ -12,7 +12,7 @@ public class SentByGmail implements EmailClient{
     @Override
     public void sentEmail(Email email) {
         try{
-            if(isValid(email.getTo())){
+            if(isValidEmail(email.getTo())){
                 if(email.getTo().contains("gmail")){
                     System.out.println("Enviando Gmail...");
                     System.out.println(email.toString());
@@ -25,7 +25,7 @@ public class SentByGmail implements EmailClient{
             System.out.println("Direccion de correo: " +email.getTo()+ " no valido");
         }
     }
-    public static boolean isValid(String email)
+    public static boolean isValidEmail(String email)
     {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
                 "[a-zA-Z0-9_+&*-]+)*@" +
